@@ -51,6 +51,7 @@ const Anmeldung = () => {
           <Form
             onSubmit={onSubmit}
             data-netlify="true"
+            form-name='contact'
             netlify-honeypot="bot-field"
             name={'contact'}
           >
