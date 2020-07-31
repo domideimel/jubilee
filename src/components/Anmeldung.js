@@ -20,7 +20,7 @@ const Anmeldung = () => {
     email,
     concert,
     party,
-    morning,w
+    morning,
     text
   }
 
