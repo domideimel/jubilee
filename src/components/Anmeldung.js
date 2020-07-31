@@ -86,7 +86,7 @@ const Anmeldung = () => {
               <Input
                 className="form-control-alternative"
                 placeholder="Postleitzahl / Ort"
-                name='town'
+                name='Postleitzahl / Ort'
                 type="text"
                 value={town}
                 onChange={e => setTown(e.target.value)}
