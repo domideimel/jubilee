@@ -3,9 +3,9 @@ import { Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
 
 const Anmeldung = () => {
   const [name, setName] = useState('')
-  const [surName, setSurName] = useState('')
-  const [street, setStreet] = useState('')
-  const [town, setTown] = useState('')
+  const [nachname, setNachname] = useState('')
+  const [strasse, setStrasse] = useState('')
+  const [ort, setOrt] = useState('')
   const [email, setEmail] = useState('')
   const [concert, setConcert] = useState('')
   const [party, setParty] = useState('')
@@ -14,9 +14,9 @@ const Anmeldung = () => {
 
   const formData = {
     name,
-    surName,
-    street,
-    town,
+    nachname,
+    strasse,
+    ort,
     email,
     concert,
     party,
@@ -68,28 +68,28 @@ const Anmeldung = () => {
                 placeholder="Nachname"
                 name='nachname'
                 type="text"
-                value={surName}
-                onChange={e => setSurName(e.target.value)}
+                value={nachname}
+                onChange={e => setNachname(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
               <Input
                 className="form-control-alternative"
                 placeholder="Straße"
-                name='straße'
+                name='strasse'
                 type="text"
-                value={street}
-                onChange={e => setStreet(e.target.value)}
+                value={strasse}
+                onChange={e => setStrasse(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
               <Input
                 className="form-control-alternative"
                 placeholder="Postleitzahl / Ort"
-                name='Postleitzahl / Ort'
+                name='Ort'
                 type="text"
-                value={town}
-                onChange={e => setTown(e.target.value)}
+                value={ort}
+                onChange={e => setOrt(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
