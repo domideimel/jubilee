@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
+import { Alert, Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
 
 const Anmeldung = () => {
   const [name, setName] = useState('')
@@ -7,10 +7,12 @@ const Anmeldung = () => {
   const [strasse, setStrasse] = useState('')
   const [ort, setOrt] = useState('')
   const [email, setEmail] = useState('')
-  const [concert, setConcert] = useState('')
-  const [party, setParty] = useState('')
-  const [morning, setMorning] = useState('')
+  const [konzert, setKonzert] = useState('')
+  const [festveranstaltung, setFestveranstaltung] = useState('')
+  const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('')
   const [text, setText] = useState('')
+  const [error, setError] = useState(false)
+  const [success, setSuccess] = useState(false)
 
   const formData = {
     name,
@@ -18,9 +20,9 @@ const Anmeldung = () => {
     strasse,
     ort,
     email,
-    concert,
-    party,
-    morning,
+    konzert,
+    festveranstaltung,
+    fruehschoppenkonzert,
     text
   }
 
@@ -37,8 +39,19 @@ const Anmeldung = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...formData })
     })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error))
+      .then(() => {
+        setName('')
+        setNachname('')
+        setStrasse('')
+        setOrt('')
+        setEmail('')
+        setKonzert('')
+        setFestveranstaltung('')
+        setFruehschoppenkonzert('')
+        setText('')
+        setSuccess(true)
+      })
+      .catch(error => setError(true))
 
   }
 
@@ -46,6 +59,9 @@ const Anmeldung = () => {
     <Container>
       <Row>
         <Col>
+
+          {success && <Alert color='success'>Erfolgreich versendt!</Alert>}
+          {error && <Alert color='danger'>Es gab einen Fehler, bitte versuch es später erneut!</Alert>}
 
           <h2 className={'display-3 text-white'}>Anmeldung</h2>
           <Form
@@ -86,7 +102,7 @@ const Anmeldung = () => {
               <Input
                 className="form-control-alternative"
                 placeholder="Postleitzahl / Ort"
-                name='Ort'
+                name='ort'
                 type="text"
                 value={ort}
                 onChange={e => setOrt(e.target.value)}
@@ -113,8 +129,9 @@ const Anmeldung = () => {
                     className="custom-control-input"
                     id="customCheck1"
                     type="radio"
-                    name='jubiläumskonzert'
-                    onChange={e => setConcert('Konzert: Ja')}
+                    name='konzert'
+                    value={konzert}
+                    onChange={e => setKonzert('Konzert: Ja')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck1">
                     Ja
@@ -125,8 +142,9 @@ const Anmeldung = () => {
                     className="custom-control-input"
                     id="customCheck2"
                     type="radio"
-                    name='jubiläumskonzert'
-                    onChange={e => setConcert('Konzert: Ja mit Partner')}
+                    name='konzert'
+                    value={konzert}
+                    onChange={e => setKonzert('Konzert: Ja mit Partner')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck2">
                     Ja mit Partner
@@ -137,8 +155,9 @@ const Anmeldung = () => {
                     className="custom-control-input"
                     id="customCheck3"
                     type="radio"
-                    name='jubiläumskonzert'
-                    onChange={e => setConcert('Konzert: Nein')}
+                    name='konzert'
+                    value={konzert}
+                    onChange={e => setKonzert('Konzert: Nein')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck3">
                     Nein
@@ -155,7 +174,8 @@ const Anmeldung = () => {
                     id="customCheck4"
                     type="radio"
                     name='festveranstaltung'
-                    onChange={e => setParty('Festveranstaltung: Ja')}
+                    value={festveranstaltung}
+                    onChange={e => setFestveranstaltung('Festveranstaltung: Ja')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck4">
                     Ja
@@ -167,7 +187,8 @@ const Anmeldung = () => {
                     id="customCheck5"
                     type="radio"
                     name='festveranstaltung'
-                    onChange={e => setParty('Festveranstaltung: Ja mit Partner')}
+                    value={festveranstaltung}
+                    onChange={e => setFestveranstaltung('Festveranstaltung: Ja mit Partner')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck5">
                     Ja mit Partner
@@ -179,7 +200,8 @@ const Anmeldung = () => {
                     id="customCheck6"
                     type="radio"
                     name='festveranstaltung'
-                    onChange={e => setParty('Festveranstaltung: Nein')}
+                    value={festveranstaltung}
+                    onChange={e => setFestveranstaltung('Festveranstaltung: Nein')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck6">
                     Nein
@@ -196,8 +218,9 @@ const Anmeldung = () => {
                     className="custom-control-input"
                     id="customCheck7"
                     type="radio"
-                    name='frühschoppenkonzert'
-                    onChange={e => setMorning('Frühschoppenkonzert: Ja')}
+                    name='fruehschoppenkonzert'
+                    value={fruehschoppenkonzert}
+                    onChange={e => setFruehschoppenkonzert('Frühschoppenkonzert: Ja')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck7">
                     Ja
@@ -208,8 +231,9 @@ const Anmeldung = () => {
                     className="custom-control-input"
                     id="customCheck8"
                     type="radio"
-                    name='frühschoppenkonzert'
-                    onChange={e => setMorning('Frühschoppenkonzert: Ja mit Partner')}
+                    name='fruehschoppenkonzert'
+                    value={fruehschoppenkonzert}
+                    onChange={e => setFruehschoppenkonzert('Frühschoppenkonzert: Ja mit Partner')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck8">
                     Ja mit Partner
@@ -220,8 +244,9 @@ const Anmeldung = () => {
                     className="custom-control-input"
                     id="customCheck9"
                     type="radio"
-                    name='frühschoppenkonzert'
-                    onChange={e => setMorning('Frühschoppenkonzert: Nein')}
+                    name='fruehschoppenkonzert'
+                    value={fruehschoppenkonzert}
+                    onChange={e => setFruehschoppenkonzert('Frühschoppenkonzert: Nein')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck9">
                     Nein
