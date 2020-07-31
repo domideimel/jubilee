@@ -60,7 +60,7 @@ const Anmeldung = () => {
       <Row>
         <Col>
 
-          {success && <Alert color='success'>Erfolgreich versendt!</Alert>}
+          {success && <Alert color='success'>Erfolgreich versandt!</Alert>}
           {error && <Alert color='danger'>Es gab einen Fehler, bitte versuch es später erneut!</Alert>}
 
           <h2 className={'display-3 text-white'}>Anmeldung</h2>
