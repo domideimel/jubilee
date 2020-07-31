@@ -50,10 +50,6 @@ const Anmeldung = () => {
           <h2 className={'display-3 text-white'}>Anmeldung</h2>
           <Form
             onSubmit={onSubmit}
-            data-netlify="true"
-            form-name='contact'
-            netlify-honeypot="bot-field"
-            name={'contact'}
           >
             <input type="hidden" name="form-name" value="contact" />
             <FormGroup>
