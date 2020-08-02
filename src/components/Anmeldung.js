@@ -11,7 +11,7 @@ const Anmeldung = () => {
   const [festveranstaltung, setFestveranstaltung] = useState('')
   const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('')
   const [text, setText] = useState('')
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(null)
   const [success, setSuccess] = useState(false)
 
   const formData = {
@@ -32,27 +32,34 @@ const Anmeldung = () => {
       .join('&')
   }
 
+  const checkIfFormIsNotEmpty = () => {
+    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '' && festveranstaltung !== ''
+  }
+
   const onSubmit = e => {
     e.preventDefault()
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formData })
-    })
-      .then(() => {
-        setName('')
-        setNachname('')
-        setStrasse('')
-        setOrt('')
-        setEmail('')
-        setKonzert('')
-        setFestveranstaltung('')
-        setFruehschoppenkonzert('')
-        setText('')
-        setSuccess(true)
+    if (checkIfFormIsNotEmpty()) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', ...formData })
       })
-      .catch(error => setError(true))
-
+        .then(() => {
+          setName('')
+          setNachname('')
+          setStrasse('')
+          setOrt('')
+          setEmail('')
+          setKonzert('')
+          setFestveranstaltung('')
+          setFruehschoppenkonzert('')
+          setText('')
+          setSuccess(true)
+        })
+        .catch(error => setError('Fehler beim versenden'))
+    } else {
+      setError('Bitte füll die mit Stern markierten Felder aus!')
+    }
   }
 
   return (<section id={'anmeldung'} className={'section-lg bg-danger text-white'}>
@@ -61,7 +68,7 @@ const Anmeldung = () => {
         <Col>
 
           {success && <Alert color='success'>Erfolgreich versandt!</Alert>}
-          {error && <Alert color='danger'>Es gab einen Fehler, bitte versuch es später erneut!</Alert>}
+          {error && <Alert color='danger'>{error}</Alert>}
 
           <h2 className={'display-3 text-white'}>Anmeldung</h2>
           <Form
@@ -71,7 +78,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="Name"
+                placeholder="Name *"
                 name='name'
                 type="text"
                 value={name}
@@ -81,7 +88,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="Nachname"
+                placeholder="Nachname *"
                 name='nachname'
                 type="text"
                 value={nachname}
@@ -91,7 +98,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="Straße"
+                placeholder="Straße *"
                 name='strasse'
                 type="text"
                 value={strasse}
@@ -101,7 +108,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="Postleitzahl / Ort"
+                placeholder="Postleitzahl / Ort *"
                 name='ort'
                 type="text"
                 value={ort}
@@ -111,7 +118,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="name@example.com"
+                placeholder="name@example.com *"
                 type="email"
                 name='email'
                 value={email}
@@ -123,7 +130,7 @@ const Anmeldung = () => {
             <h3 className='display-4 text-white'>Anwesenheit</h3>
             <Row>
               <Col>
-                <h5 className='display-5 text-white'>31.01.2021 Jubiläumskonzert</h5>
+                <h5 className='display-5 text-white'>31.01.2021 Jubiläumskonzert *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input
                     className="custom-control-input"
@@ -167,7 +174,7 @@ const Anmeldung = () => {
             </Row>
             <Row>
               <Col>
-                <h5 className='display-5 text-white'>30.10.2021 Festveranstaltung</h5>
+                <h5 className='display-5 text-white'>30.10.2021 Festveranstaltung *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input
                     className="custom-control-input"
@@ -212,7 +219,7 @@ const Anmeldung = () => {
             <Row>
               <Col>
                 <h5 className='display-5 text-white'>31.10.2021 Frühschoppenkonzert anschl. gemütliches
-                  Beisammensein</h5>
+                  Beisammensein *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input
                     className="custom-control-input"
