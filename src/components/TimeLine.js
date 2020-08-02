@@ -7,7 +7,7 @@ const TimeLine = ({ items }) => {
         <li key={item.title + '-' + item.subtitle}>
           <span className={'mr-2'}>{item.subtitle}</span>
           <span>{item.title}</span>
-          {item.content.length && <p>{item.content}</p>}
+          {item.content !== '' && <p>{item.content}</p>}
         </li>
       ))}
     </ul>
