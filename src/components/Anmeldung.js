@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Alert, Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
 
 const Anmeldung = () => {
@@ -13,6 +13,8 @@ const Anmeldung = () => {
   const [text, setText] = useState('')
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(false)
+
+  const sectionRef = useRef(null)
 
   const formData = {
     name,
@@ -38,6 +40,8 @@ const Anmeldung = () => {
 
   const onSubmit = e => {
     e.preventDefault()
+    const { current } = sectionRef
+    setError(null)
     if (checkIfFormIsNotEmpty()) {
       fetch('/', {
         method: 'POST',
@@ -57,12 +61,20 @@ const Anmeldung = () => {
           setSuccess(true)
         })
         .catch(error => setError('Fehler beim versenden'))
+      current.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
+      })
     } else {
       setError('Bitte füll die mit Stern markierten Felder aus!')
+      current.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
+      })
     }
   }
 
-  return (<section id={'anmeldung'} className={'section-lg bg-danger text-white'}>
+  return (<section id={'anmeldung'} className={'section-lg bg-danger text-white'} ref={sectionRef}>
     <Container>
       <Row>
         <Col>
