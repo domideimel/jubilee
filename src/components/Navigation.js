@@ -1,21 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HashLink as Link, NavHashLink as NavLink } from 'react-router-hash-link'
-import {
-  Col,
-  Container,
-  DropdownItem,
-  DropdownMenu,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavItem,
-  Row,
-  UncontrolledCollapse,
-  UncontrolledDropdown
-} from 'reactstrap'
+import { Col, Collapse, Container, Nav, Navbar, NavbarBrand, NavItem, Row } from 'reactstrap'
 
 const Navigation = () => {
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const setOpen = () => {
+    if(window.innerWidth >= 768) return
+
+    setIsOpen(!isOpen)
+  }
   return (<>
     <Navbar
       className="navbar-horizontal navbar-light sticky-top bg-white shadow"
@@ -34,10 +29,11 @@ const Navigation = () => {
           data-toggle="collapse"
           id="navbar-primary"
           type="button"
+          onClick={setOpen}
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <UncontrolledCollapse navbar toggler="#navbar-primary">
+        <Collapse isOpen={isOpen} navbar toggler="#navbar-primary">
           <div className="navbar-collapse-header">
             <Row>
               <Col className="collapse-brand" xs="6">
@@ -53,6 +49,7 @@ const Navigation = () => {
                   data-toggle="collapse"
                   id="navbar-primary"
                   type="button"
+                  onClick={setOpen}
                 >
                   <span />
                   <span />
@@ -65,6 +62,7 @@ const Navigation = () => {
               <NavLink
                 className={'nav-link'}
                 smooth
+                onClick={setOpen}
                 to="#top"
                 scroll={el => el.scrollIntoView({
                   block: 'start',
@@ -78,6 +76,7 @@ const Navigation = () => {
               <NavLink
                 className={'nav-link'}
                 smooth
+                onClick={setOpen}
                 to="#festjahr"
                 scroll={el => el.scrollIntoView({
                   block: 'start',
@@ -91,6 +90,7 @@ const Navigation = () => {
               <NavLink
                 className={'nav-link'}
                 smooth
+                onClick={setOpen}
                 to="#chronik"
                 scroll={el => el.scrollIntoView({
                   block: 'start',
@@ -104,6 +104,7 @@ const Navigation = () => {
               <NavLink
                 className={'nav-link'}
                 smooth
+                onClick={setOpen}
                 to="#anmeldung"
                 scroll={el => el.scrollIntoView({
                   block: 'start',
@@ -113,31 +114,8 @@ const Navigation = () => {
                 Anmeldung
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav>
-              <DropdownMenu
-                aria-labelledby="navbar-primary_dropdown_1"
-                right
-              >
-                <DropdownItem
-                  to="#festjahr"
-                >
-                  Festjahr
-                </DropdownItem>
-                <DropdownItem
-                  to="#chronik"
-                >
-                  Chronik
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem
-                  to="#anmeldung"
-                >
-                  Anmeldung
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
           </Nav>
-        </UncontrolledCollapse>
+        </Collapse>
       </Container>
     </Navbar>
   </>)
