@@ -14,7 +14,7 @@ const Chronik = () => {
   }, {
     'title': 'Herr Thüsing',
     'subtitle': '1977',
-    'content': 'vorübergehend Herr Thüsing aus Züschen, Ausbilder der Kreisjugendmusikschule'
+    'content': 'vorübergehend Herr Thüsing aus Züschen, Ausbilder der Kreisjugendmusikschule anschließend übergangsweise die Herren Kramer aus Ostwig und Körner aus Geseke'
   }, {
     'title': 'Herr Christoph Hanfland',
     'subtitle': '1978 - 1998',
@@ -66,8 +66,7 @@ const Chronik = () => {
           <p>
             Spieler der ersten Stunde waren Rainer Hamann, Christoph Hanfland, Karl-Josef Hanfland, Hubertus Kräling,
             Severin Lörwald, Karl-Udo Lütteken, Peter Mähler, Hubertus Plebs, Meinolf Rohleder, Reinhard Rohleder,
-            Thomas
-            Rohleder und Bruno Stabaginski. Diese Gruppe hatte ihren ersten Auftritt beim Martinszug 1971, wobei
+            Thomas Rohleder und Bruno Stabaginski. Diese Gruppe hatte ihren ersten Auftritt beim Martinszug 1971, wobei
             allerdings Lautstärke und Harmonie noch in einem ungesunden Verhältnis standen.
           </p>
           <p>
@@ -90,17 +89,17 @@ const Chronik = () => {
           </p>
           <p>
             In einer Versammlung am 07.02.1974 wurde Frau Christa Hanfland zur ersten Vorsitzenden dieses Musikvereins
-            gewählt. Sie sorgte mit viel Eigeninitiative für die ersten Uniformen, blaue Kasacks, die auch beim 10
-            jährigen Jubiläum im Jahr 1981 noch getragen wurden. In den folgenden Jahren wuchs die Mitgliederzahl des
-            Musikvereins ständig. Ende 1978 beschloss die Generalversammlung eine neue Satzung und die Eintragung in das
-            Vereinsregister. Neuer Vorsitzender des Musikvereins wurde Josef Hagenhoff. Ihm zur Seite standen Werner
+            gewählt. Sie sorgte mit viel Eigeninitiative für die ersten Uniformen, blaue Kasacks, die auch beim
+            10-jährigen Jubiläum im Jahr 1981 wieder getragen wurden. In den folgenden Jahren wuchs die Mitgliederzahl
+            des Musikvereins ständig. Ende 1978 beschloss die Generalversammlung eine neue Satzung und die Eintragung in
+            das Vereinsregister. Neuer Vorsitzender des Musikvereins wurde Josef Hagenhoff. Ihm zur Seite standen Werner
             Brockmann, Walter Ritter, Kurt Herrmann, Birgit Hanfland, Reinhard Rohleder und Franz Mickus.
           </p>
           <p>
             Unter der Stabführung von Christoph Hanfland entwickelte sich das Orchester zu einem beachtlichen
             Klangkörper, der aus dem Dorf- und Vereinsleben nicht mehr wegzudenken ist. Schwierig für den Dirigenten und
             den Verein ist, dass viele Jugendliche Spieler nach der Schul- oder Berufsausbildung den Ort verlassen und
-            dem Orchester nicht mehr zur Verfügung stehen. So wurden allein bis zum 25 jährigen Jubiläum schon über 100
+            dem Orchester nicht mehr zur Verfügung stehen. So wurden allein bis zum 25- jährigen Jubiläum schon über 100
             Spieler ausgebildet.
           </p>
         </Col>

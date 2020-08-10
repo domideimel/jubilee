@@ -7,12 +7,12 @@ function Year () {
       <Row>
         <Col>
           <h1 className="display-3 text-white">
-            Willkommen zum 50. Jährigen Jubiläum
+            Willkommen zum 50-jährigen Jubiläum im Jahr 2021!
             <span> Wir haben ein spannendes Jahr für euch geplant!</span>
           </h1>
           <p className="lead text-white">
-            Der Musikverein, Negertalmusikanten e. V. Siedlinghausen wurde 1971 gegründet und besteht zur Zeit aus 40
-            aktiven Musiker, ca. 15 Musiker befinden sich in der musikalischen Ausbildung.
+            Der Musikverein Negertalmusikanten e. V. Siedlinghausen wurde 1971 gegründet und besteht zur Zeit aus 40
+            aktiven Musikern; ca. 15 Musiker befinden sich in der Ausbildung.
           </p>
         </Col>
       </Row>
@@ -27,6 +27,13 @@ function Year () {
               <td>31.01.2021</td>
               <td>Jubiläumskonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
+            </tr>
+            <tr>
+              <td>30.04.2021</td>
+              <td>
+                Maibaum aufstellen
+              </td>
+              <td>Eschenplatz</td>
             </tr>
             <tr>
               <td>30.10.2021</td>
