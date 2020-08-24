@@ -74,7 +74,7 @@ const Anmeldung = () => {
     }
   }
 
-  return (<section id={'anmeldung'} className={'section-lg bg-danger text-white'} ref={sectionRef}>
+  return (<section id={'anmeldung'} className={'section-lg'} ref={sectionRef} style={{ background: '#f5f7f9' }}>
     <Container>
       <Row>
         <Col>
@@ -82,7 +82,7 @@ const Anmeldung = () => {
           {success && <Alert color='success'>Erfolgreich versandt!</Alert>}
           {error && <Alert color='danger'>{error}</Alert>}
 
-          <h2 className={'display-3 text-white'}>Anmeldung</h2>
+          <h2 className={'display-3'}>Anmeldung</h2>
           <Form
             onSubmit={onSubmit}
           >
@@ -139,10 +139,10 @@ const Anmeldung = () => {
             </FormGroup>
 
             <hr className={'bg-white'} />
-            <h3 className='display-4 text-white'>Anwesenheit</h3>
+            <h3 className='display-4'>Anwesenheit</h3>
             <Row>
               <Col>
-                <h5 className='display-5 text-white'>31.01.2021 Jubiläumskonzert *</h5>
+                <h5 className='display-5'>31.01.2021 Jubiläumskonzert *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input
                     className="custom-control-input"
@@ -186,7 +186,7 @@ const Anmeldung = () => {
             </Row>
             <Row>
               <Col>
-                <h5 className='display-5 text-white'>30.10.2021 Festveranstaltung *</h5>
+                <h5 className='display-5 '>30.10.2021 Festveranstaltung *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input
                     className="custom-control-input"
@@ -230,7 +230,7 @@ const Anmeldung = () => {
             </Row>
             <Row>
               <Col>
-                <h5 className='display-5 text-white'>31.10.2021 Frühschoppenkonzert anschl. gemütliches
+                <h5 className='display-5 '>31.10.2021 Frühschoppenkonzert anschl. gemütliches
                   Beisammensein *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input

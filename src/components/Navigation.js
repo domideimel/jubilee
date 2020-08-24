@@ -91,20 +91,6 @@ const Navigation = () => {
                 className={'nav-link'}
                 smooth
                 onClick={setOpen}
-                to="#chronik"
-                scroll={el => el.scrollIntoView({
-                  block: 'start',
-                  behavior: 'smooth'
-                })}
-              >
-                Chronik
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={'nav-link'}
-                smooth
-                onClick={setOpen}
                 to="#anmeldung"
                 scroll={el => el.scrollIntoView({
                   block: 'start',
@@ -112,6 +98,20 @@ const Navigation = () => {
                 })}
               >
                 Anmeldung
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={'nav-link'}
+                smooth
+                onClick={setOpen}
+                to="#fotos"
+                scroll={el => el.scrollIntoView({
+                  block: 'start',
+                  behavior: 'smooth'
+                })}
+              >
+                Das sind wir
               </NavLink>
             </NavItem>
           </Nav>
