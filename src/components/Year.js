@@ -48,29 +48,32 @@ function Year () {
           <Table className={'text-white mt-4 table-responsive'}>
             <tbody>
             <tr>
-              <td>31.01.2021</td>
+              <td>31.01.2021 *</td>
               <td>Jubiläumskonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             <tr>
-              <td>30.04.2021</td>
+              <td>30.04.2021 *</td>
               <td>
                 Maibaum aufstellen
               </td>
               <td>@ Eschenplatz Siedlinghausen</td>
             </tr>
             <tr>
-              <td>30.10.2021</td>
+              <td>30.10.2021 *</td>
               <td>Festveranstaltung</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             <tr>
-              <td>31.10.2021</td>
+              <td>31.10.2021 * </td>
               <td>Frühshoppenkonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             </tbody>
           </Table>
+          <p className="lead text-white">
+            * Coronabedingte Änderungen vorbehalten.
+          </p>
         </Col>
       </Row>
     </Container>
