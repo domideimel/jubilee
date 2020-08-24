@@ -295,19 +295,18 @@ const Anmeldung = () => {
               Welches Instrument spielst Du?<br />
               Noten stellen wir Dir zur Verfügung.
             </p>
-            <p>
-              Wir freuen uns auf einen gemeinsamen Auftritt!
-            </p>
-
             <Input
               className="form-control-alternative"
-              placeholder="Schreib uns etwas..."
+              placeholder="Ich spiele..."
               rows="3"
               type="textarea"
               name='text'
               value={text}
               onChange={e => setText(e.target.value)}
             />
+            <p className={'mt-3'}>
+              Wir freuen uns auf einen gemeinsamen Auftritt!
+            </p>
             <Button
               type='submit'
               className='mt-5'
