@@ -84,7 +84,7 @@ const Anmeldung = () => {
           {success && <Alert color='success'>Erfolgreich versandt!</Alert>}
           {error && <Alert color='danger'>{error}</Alert>}
 
-          <h2 className={'display-3'}>Anmeldung</h2>
+          <h2 className={'display-3'}>Anmeldung ehem. Musiker/innen und Vorstandsmitglieder</h2>
           <Form
             onSubmit={onSubmit}
           >
