@@ -7,6 +7,7 @@ const Anmeldung = () => {
   const [strasse, setStrasse] = useState('')
   const [ort, setOrt] = useState('')
   const [email, setEmail] = useState('')
+  const [handy, setHandy] = useState('')
   const [konzert, setKonzert] = useState('')
   const [festveranstaltung, setFestveranstaltung] = useState('')
   const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('')
@@ -22,6 +23,7 @@ const Anmeldung = () => {
     strasse,
     ort,
     email,
+    handy,
     konzert,
     festveranstaltung,
     fruehschoppenkonzert,
@@ -90,7 +92,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="Name *"
+                placeholder="Vorname *"
                 name='name'
                 type="text"
                 value={name}
@@ -100,7 +102,7 @@ const Anmeldung = () => {
             <FormGroup>
               <Input
                 className="form-control-alternative"
-                placeholder="Nachname *"
+                placeholder="Name *"
                 name='nachname'
                 type="text"
                 value={nachname}
@@ -135,6 +137,16 @@ const Anmeldung = () => {
                 name='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                className="form-control-alternative"
+                placeholder="Handynummer"
+                type="text"
+                name='handy'
+                value={handy}
+                onChange={e => setHandy(e.target.value)}
               />
             </FormGroup>
 

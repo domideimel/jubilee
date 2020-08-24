@@ -40,7 +40,7 @@ function Year () {
           </p>
         </Col>
       </Row>
-      <Row>
+      <Row className={'mt-md-4'}>
         <Col>
           <h1 className="display-3 text-white">
             Willkommen zum 50-jährigen Jubiläum an folgenden Terminen:
@@ -57,11 +57,11 @@ function Year () {
               <td>
                 Maibaum aufstellen
               </td>
-              <td>Eschenplatz</td>
+              <td>@ Eschenplatz Siedlinghausen</td>
             </tr>
             <tr>
               <td>30.10.2021</td>
-              <td>Großer Festabend</td>
+              <td>Festveranstaltung</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             <tr>
