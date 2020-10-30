@@ -66,7 +66,7 @@ function Year () {
             </tr>
             <tr>
               <td>31.10.2021 *</td>
-              <td>Frühshoppenkonzert</td>
+              <td>Frühschoppenkonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             </tbody>
