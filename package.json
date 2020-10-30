@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node ./style-scripts.js && node ./fonts.js",
+    "build": "react-scripts build && node ./style-scripts.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
