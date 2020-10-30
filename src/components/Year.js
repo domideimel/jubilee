@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Container, Row, Table } from 'reactstrap'
 
 function Year () {
@@ -46,9 +45,9 @@ function Year () {
             Willkommen zum 50-jährigen Jubiläum an folgenden Terminen:
           </h1>
           <Table className={'text-white mt-4 table-responsive'}>
-            <tbody>
+            <tbody className={'w-100'}>
             <tr>
-              <td>31.01.2021 *</td>
+              <td>13.06.2021 / (19.09.2021) *</td>
               <td>Jubiläumskonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>

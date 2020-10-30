@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Container, Nav, NavItem, Row } from 'reactstrap'
 
 const Footer = () => {

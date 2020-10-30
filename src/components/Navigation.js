@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 import { HashLink as Link, NavHashLink as NavLink } from 'react-router-hash-link'
 import { Col, Collapse, Container, Nav, Navbar, NavbarBrand, NavItem, Row } from 'reactstrap'
 
@@ -18,7 +18,7 @@ const Navigation = () => {
     >
       <Container>
         <NavbarBrand to="/#top" smooth tag={Link}>
-          <img style={{ height: '50px' }} src={require('../assets/img/logo.png')} alt="50 Jahre Negertalmusikanten" />
+          <img style={{ height: '50px' }} src={require('../assets/img/logo.png').default} alt="50 Jahre Negertalmusikanten" />
         </NavbarBrand>
         <button
           aria-controls="navbar-primary"
@@ -37,7 +37,7 @@ const Navigation = () => {
           <div className="navbar-collapse-header">
             <Row>
               <Col className="collapse-brand" xs="6">
-                <img src={require('../assets/img/logo.png')} alt="50 Jahre Negertalmusikanten" />
+                <img src={require('../assets/img/logo.png').default} alt="50 Jahre Negertalmusikanten" />
               </Col>
               <Col className="collapse-close" xs="6">
                 <button

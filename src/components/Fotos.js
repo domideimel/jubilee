@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Container, Row } from 'reactstrap'
 
 const Fotos = () => {
@@ -6,7 +5,7 @@ const Fotos = () => {
     <Container>
       <Row>
         <Col className={'d-flex justify-content-center'}>
-          <img src={require('../assets/img/negertalmusikanten-weste.jpg')} alt="50 Jahre Negertalmusikanten" loading="lazy" className={'img-fluid m-auto'} />
+          <img src={require('../assets/img/negertalmusikanten-weste.jpg').default} alt="50 Jahre Negertalmusikanten" loading="lazy" className={'img-fluid m-auto'} />
         </Col>
       </Row>
     </Container>
