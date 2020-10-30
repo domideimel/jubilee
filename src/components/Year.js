@@ -35,7 +35,8 @@ function Year () {
             anzumelden.
           </p>
           <p className="lead text-white">
-            <strong>Der Vorstand und die Aktiven der Negertalmusikanten freuen sich auf ein schönes Jahr mit Euch!</strong>
+            <strong>Der Vorstand und die Aktiven der Negertalmusikanten freuen sich auf ein schönes Jahr mit
+              Euch!</strong>
           </p>
         </Col>
       </Row>
@@ -47,11 +48,6 @@ function Year () {
           <Table className={'text-white mt-4 table-responsive'}>
             <tbody className={'w-100'}>
             <tr>
-              <td>13.06.2021 / (19.09.2021) *</td>
-              <td>Jubiläumskonzert</td>
-              <td>@ Schützenhalle Siedlinghausen</td>
-            </tr>
-            <tr>
               <td>30.04.2021 *</td>
               <td>
                 Maibaum aufstellen
@@ -59,12 +55,17 @@ function Year () {
               <td>@ Eschenplatz Siedlinghausen</td>
             </tr>
             <tr>
+              <td>13.06.2021 * / (19.09.2021) *</td>
+              <td>Jubiläumskonzert</td>
+              <td>@ Schützenhalle Siedlinghausen</td>
+            </tr>
+            <tr>
               <td>30.10.2021 *</td>
               <td>Festveranstaltung</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             <tr>
-              <td>31.10.2021 * </td>
+              <td>31.10.2021 *</td>
               <td>Frühshoppenkonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
