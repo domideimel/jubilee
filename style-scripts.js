@@ -18,7 +18,7 @@ links.forEach(link => {
   }
   fileWithPreload = [
     ...fileWithPreload,
-    `<link rel="preload" href=".${link}" as="${fileType}">`
+    `<link rel="preload" href=".${link}" as="${fileType}" crossorigin>`
   ];
 });
 
