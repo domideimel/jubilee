@@ -1,4 +1,3 @@
-import React from 'react'
 import '../assets/timeline.scss'
 const TimeLine = ({ items }) => {
   return (

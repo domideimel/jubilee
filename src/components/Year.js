@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Container, Row, Table } from 'reactstrap'
 
 function Year () {
@@ -36,7 +35,8 @@ function Year () {
             anzumelden.
           </p>
           <p className="lead text-white">
-            <strong>Der Vorstand und die Aktiven der Negertalmusikanten freuen sich auf ein schönes Jahr mit Euch!</strong>
+            <strong>Der Vorstand und die Aktiven der Negertalmusikanten freuen sich auf ein schönes Jahr mit
+              Euch!</strong>
           </p>
         </Col>
       </Row>
@@ -46,12 +46,7 @@ function Year () {
             Willkommen zum 50-jährigen Jubiläum an folgenden Terminen:
           </h1>
           <Table className={'text-white mt-4 table-responsive'}>
-            <tbody>
-            <tr>
-              <td>31.01.2021 *</td>
-              <td>Jubiläumskonzert</td>
-              <td>@ Schützenhalle Siedlinghausen</td>
-            </tr>
+            <tbody className={'w-100'}>
             <tr>
               <td>30.04.2021 *</td>
               <td>
@@ -60,13 +55,18 @@ function Year () {
               <td>@ Eschenplatz Siedlinghausen</td>
             </tr>
             <tr>
+              <td>13.06.2021 * / (19.09.2021) *</td>
+              <td>Jubiläumskonzert</td>
+              <td>@ Schützenhalle Siedlinghausen</td>
+            </tr>
+            <tr>
               <td>30.10.2021 *</td>
               <td>Festveranstaltung</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             <tr>
-              <td>31.10.2021 * </td>
-              <td>Frühshoppenkonzert</td>
+              <td>31.10.2021 *</td>
+              <td>Frühschoppenkonzert</td>
               <td>@ Schützenhalle Siedlinghausen</td>
             </tr>
             </tbody>

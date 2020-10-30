@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Alert, Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
 
 const Anmeldung = () => {
@@ -9,6 +9,7 @@ const Anmeldung = () => {
   const [email, setEmail] = useState('')
   const [handy, setHandy] = useState('')
   const [konzert, setKonzert] = useState('')
+  const [konzert2, setKonzert2] = useState('')
   const [festveranstaltung, setFestveranstaltung] = useState('')
   const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('')
   const [text, setText] = useState('')
@@ -25,6 +26,7 @@ const Anmeldung = () => {
     email,
     handy,
     konzert,
+    konzert2,
     festveranstaltung,
     fruehschoppenkonzert,
     text
@@ -37,7 +39,7 @@ const Anmeldung = () => {
   }
 
   const checkIfFormIsNotEmpty = () => {
-    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '' && festveranstaltung !== ''
+    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '' && konzert2 !== '' && festveranstaltung !== ''
   }
 
   const onSubmit = e => {
@@ -57,6 +59,7 @@ const Anmeldung = () => {
           setOrt('')
           setEmail('')
           setKonzert(null)
+          setKonzert2(null)
           setFestveranstaltung(null)
           setFruehschoppenkonzert(null)
           setText('')
@@ -155,7 +158,7 @@ const Anmeldung = () => {
             <h3 className='display-4'>Anwesenheit</h3>
             <Row>
               <Col>
-                <h5 className='display-5'>31.01.2021 Jubiläumskonzert *</h5>
+                <h5 className='display-5'>13.06.2021 Jubiläumskonzert *</h5>
                 <div className="custom-control custom-radio mb-3">
                   <input
                     className="custom-control-input"
@@ -192,6 +195,50 @@ const Anmeldung = () => {
                     onChange={e => setKonzert('Konzert: Nein')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck3">
+                    Nein
+                  </label>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <h5 className='display-5'>19.09.2021 (Ausweichtermin Jubiläumskonzert) *</h5>
+                <div className="custom-control custom-radio mb-3">
+                  <input
+                    className="custom-control-input"
+                    id="customCheck13"
+                    type="radio"
+                    name='konzert2'
+                    value={konzert2}
+                    onChange={e => setKonzert2('Konzert (Ausweichtermin): Ja')}
+                  />
+                  <label className="custom-control-label" htmlFor="customCheck13">
+                    Ja
+                  </label>
+                </div>
+                <div className="custom-control custom-radio mb-3">
+                  <input
+                    className="custom-control-input"
+                    id="customCheck12"
+                    type="radio"
+                    name='konzert2'
+                    value={konzert2}
+                    onChange={e => setKonzert2('Konzert (Ausweichtermin): Ja mit Partner')}
+                  />
+                  <label className="custom-control-label" htmlFor="customCheck12">
+                    Ja mit Partner
+                  </label>
+                </div>
+                <div className="custom-control custom-radio mb-3">
+                  <input
+                    className="custom-control-input"
+                    id="customCheck11"
+                    type="radio"
+                    name='konzert2'
+                    value={konzert2}
+                    onChange={e => setKonzert2('Konzert (Ausweichtermin): Nein')}
+                  />
+                  <label className="custom-control-label" htmlFor="customCheck11">
                     Nein
                   </label>
                 </div>
