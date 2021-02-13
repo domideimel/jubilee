@@ -62,7 +62,7 @@ function Year() {
                   <td>@ Eschenplatz Siedlinghausen</td>
                 </tr>
                 <tr>
-                  <td>13.06.2021 * / (19.09.2021) *</td>
+                  <td>19.09.2021 *</td>
                   <td>Jubiläumskonzert</td>
                   <td>@ Schützenhalle Siedlinghausen</td>
                 </tr>
